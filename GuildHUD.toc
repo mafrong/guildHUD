@@ -1,0 +1,7 @@
+## Interface: 80300
+## Title: GuildHUD
+## Version: 1.0
+## SavedVariables: 
+## SavedVariablesPerCharacter: SavedFontSize, SavedNotesSwitch, SavedLockSwitch, SavedIgnoreText, SavedLocationSwitch
+
+GuildHUD.lua
