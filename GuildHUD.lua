@@ -19,12 +19,12 @@ end
 guildHUDFrame:SetScript("OnDragStart", guildHudStartMoving)
 guildHUDFrame:SetScript("OnDragStop", guildHUDFrame.StopMovingOrSizing)
 
+local showExtra = false
 local myFont = GameFontNormal:GetFont();
 local guildHudConfiguration = nil
 local line = guildHUDFrame:CreateTexture()
 local textStrings = {}
 textStrings[1] = guildHUDFrame:CreateFontString("tableString" .. 1, "OVERLAY");
-local showExtra = false
 
 
 local function updateGuild()
@@ -91,16 +91,11 @@ local function updateGuild()
 
 	-- clear the rest of the list
 	for k = j, #textStrings do
-		--textStrings[k]:SetFont(myFont,SavedFontSize,"NONE");
 		textStrings[k]:SetText("")
 	end
-  
-  
-  --guildHUDFrame:SetMovable(not SavedLockSwitch)
 end
 
 local function heartbeat()
-	--print ("beat")
 	updateGuild()
 	C_Timer.After(2, heartbeat)
 end
